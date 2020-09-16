@@ -1,0 +1,29 @@
+
+<html>
+    <head>
+        <title>Prediction Page</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-w3schools.css">
+        <style>
+         body {
+             background-image: url("{{url_for('static',filename='artifacts/i2.jpg')}}");
+                  background-repeat: no-repeat;
+                background-attachment: fixed;
+                    background-size: cover;
+                }
+            #content{
+                text-align: center;
+                color: floralwhite;
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <h3 style="font-size: 50px">Here is your Prediction</h3>
+        <img src="{{ user_image }}" class="img-thumbnail" alt="User Image">
+       <!--<h2>{{path}}</h2>  -->
+        <h1>Predicted Name : <span><b><i>{{name}}</i></b></span></h1>
+        </div>
+    </body>
+</html>

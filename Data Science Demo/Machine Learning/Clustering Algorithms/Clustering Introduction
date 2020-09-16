@@ -1,0 +1,8 @@
+clustering algorithms are algorithms which helps in make clusters of similar data elements 
+it is a type of unsupervised learning in which there will not target or dependent variable 
+be there to predict or classify 
+
+only independet features will be there and these algorithms will make clusters of similar data elements
+
+Very Popular Clustering Algorithms is :  
+1. K-Means Clustering Algorithm

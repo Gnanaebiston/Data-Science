@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Next Word Prediction</title>
+         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-w3schools.css">
+        <style type="text/css">
+            h3{
+                margin-right: 40px;
+                margin-left: 40px;
+                font-size: 20px;
+            }
+            button:hover {
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+                 background-color:#00BFE7;
+            }
+            form{
+                text-align: center;
+                font-size: 20px;
+            }
+            #div1{
+                text-align: center;
+            }
+            body {
+                background-image: url("{{ url_for('static',filename='n5.jpg') }}");
+                  background-repeat: no-repeat;
+                background-attachment: fixed;
+                    background-size: cover;
+                }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center; font-size: 40px;"><b>Next Word Prediction</b></h1><br>
+        
+        <i><h3 style=" color: #1F4673">A lion was once sleeping in the jungle when a mouse started running up and down his body just for fun. This disturbed the lion’s sleep, and he woke up quite angry. He was about to eat the mouse when the mouse desperately requested the lion to set him free. “I promise you, I will be of great help to you someday if you save me.” The lion laughed at the mouse’s confidence and let him go.
+One day, a few hunters came into the forest and took the lion with them. They tied him up against a tree. The lion was struggling to get out and started to whimper. Soon, the mouse walked past and noticed the lion in trouble. Quickly, he ran and gnawed on the ropes to set the lion free. Both of them sped off into the jungle.</h3></i><br><br>
+         <form action="{{ url_for('predict')}}" method="post">
+             
+            <!-- <textarea name="textarea" placeholder="Enter the passage here" cols="50" rows="5" required></textarea><br><br> -->
+    	Enter Three Words : <input type="text" name="word" placeholder="Enter three Words here" required="required" /><br><br>
+             No. of Words to predict : <input type="range" id="points" name="points" min="0" max="5" value="1" oninput="zzz.value=points.value"><output style="margin-left: 10px;" name='x' id='zzz'>1</output><br><br><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Next Word</button>
+    </form>
+    <br><br>
+         <div id="div1" style="font-size: 25px;">predicted Words : <b><span style="font-size: 30px;">{{ prediction_text }} </span></b></div>
+    
+    </body>
+</html>

@@ -1,0 +1,49 @@
+
+<html >
+<head>
+    
+  <title>Spam Email Classifier</title>
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-w3schools.css">
+<!--<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">-->
+    <style type="text/css">
+        body {
+                background-image: url("{{ url_for('static',filename='e1.jpg')}}");
+                  background-repeat: no-repeat;
+                
+                    background-size: cover;
+                }
+#login{
+                text-align: center;
+                margin-top: 150px;
+         }
+button:hover {
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+                 background-color:#00BFE7;
+         }
+         #div1{
+             font-size: 30px;
+             font-style: italic;
+}
+    </style>
+  
+</head>
+
+<body>
+ <div id="login">
+	<h3 style="font-size: 50px">Spam Email Classifier</h3><br><br>
+
+    <form action="{{ url_for('predict')}}" method="post">
+        <textarea name="tweet" placeholder="Enter Your Email Here" rows="8" cols="50"></textarea><br><br>
+    	<!--<input type="text" name="tweet" placeholder="enter your email" required="required" /> -->
+        <button type="submit" class="btn btn-primary btn-block btn-large">Click Here to Check</button>
+    </form>
+
+   <br>
+   <br>
+   <div id="div1">This is Email is :<span ><b>{{ prediction_text }} </b></span></div>
+
+ </div>
+</body>
+</html>

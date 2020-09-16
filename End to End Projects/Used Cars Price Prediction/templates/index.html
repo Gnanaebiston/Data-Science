@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Used Cars Price Prediction</title>
+         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+         <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-w3schools.css">
+        <style type="text/css">
+            h1{
+                font-size: 38px;
+                text-align: center;
+                font-style: italic;
+            }
+            form{
+                font-size: 18px;
+                text-align: center;
+                font-style: italic;
+            }
+            div{
+                text-align: center;
+                font-size: 25px;
+                font-style: italic;
+            }
+            button{
+                font-size: 18px;
+            }
+                button:hover {
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+                 background-color:#00BFE7;
+            }
+            body {
+                background-image: url("{{ url_for('static',filename='u6.jpg') }}");
+                  background-repeat: no-repeat;
+                background-attachment: fixed;
+                    background-size: cover;
+                color: floralwhite;
+                }
+        </style>
+        
+    </head>
+    <body>
+        <h1>Used Cars Price Prediction</h1><br>
+        
+        <form action="{{url_for('predict')}}" method="post">
+            Year of Manufacturing : <input type="number" name="builtyear" value="2017" placeholder="Enter Year of Manufacturing" required/><br><br>
+            Kilometres Driven : <input type="number" value="25000" required name="kmdriven" placeholder="Enter Kms Driven"><br><br>
+            Fuel Type : <input type="radio" required name="fueltype" value="Diesel" > Diesel
+                        <input type="radio" name="fueltype" value="Petrol" checked> Petrol
+                        <input type="radio" name="fueltype" value="CNG"> CNG <br><br>
+            Transmission : <input required type="radio" name="transmission" value="Automatic" >Automatic
+                            <input type="radio" name="transmission" value="Manual" checked>Manual <br><br>
+            
+            Owner Type : <input required type="radio" name="ownertype" value="First" checked> First
+                        <input type="radio" name="ownertype" value="Second"> Second
+                        <input type="radio" name="ownertype" value="Third"> Third <br><br>
+            
+            Engine(CC) :  <input type="number" required name="engine" placeholder="Enter CC of Engine" value="2400"><br><br>
+            New Price(Lacs) : <input type="number" value="25" required name="newprice" placeholder="Enter Price for New Car in Lacs"><br><br> 
+            
+            <button type="submit">Predict Price</button>
+        </form><br><br> 
+        <div>
+            Predicted Price is : <span><b>{{prediction_text}}</b></span> Lacs
+        </div>
+        
+        
+        
+    </body>
+</html>

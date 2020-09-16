@@ -1,0 +1,60 @@
+
+<html>
+    <head>
+        <title>Sportman Identifier</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-w3schools.css">
+        <style>
+            body {
+                background-image: url("{{ url_for('static',filename='artifacts/i1.jpg') }}");
+                  background-repeat: no-repeat;
+                background-attachment: fixed;
+                    background-size: cover;
+                }
+            #content{
+                text-align: center;
+                margin-top: 120px;
+                }
+            h3{
+                font-size: 40px;
+                color:floralwhite;
+            }
+            h1{
+                color: floralwhite;
+                font-size: 50px;
+                margin-top: 50px;
+                text-align: center;
+            }
+            #button:hover {
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+                 background-color:#00BFE7;
+  color: white;
+                
+            }
+                        #button {
+                            transition-duration: 0.4s;
+                            font-size: 20px;
+                            font-style: italic;
+            }
+            
+            
+        
+        </style>
+    </head>
+    <body>
+        <h1><em><b>Sportman Identifier</b></em></h1>
+        <div id="content">
+        <h3><em><b>Upload An Image</b></em></h3><br><br>
+        <form action="{{url_for('predict')}}" enctype="multipart/form-data" method="post">
+        <input style="color: floralwhite; margin-left: 80px; font-style: italic;" type="file" name="image" accept="image/*" />
+            <br><br>
+            <br>
+        <input id="button" type="submit" name="submit" value="Predict Sportman">
+        </form>
+            </div>
+    </body>
+    
+    
+
+
+</html>

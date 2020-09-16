@@ -1,0 +1,15 @@
+Natural Language Processing, usually shortened as NLP, is a branch of artificial intelligence that deals with the interaction between computers and humans using the natural language. The ultimate objective of NLP is to read, decipher, understand, and make sense of the human languages in a manner that is valuable
+
+We used NLP library to use some modules which helped us to implement NPL.
+Libraries:
+1.nltk
+
+topics:
+1.Stemming
+2.Lemmatization
+3.Bag of Words
+4.TF-IDF
+5.Word2Vec
+6.Word Embedding
+  A.one_hot
+  B.pad_sequence

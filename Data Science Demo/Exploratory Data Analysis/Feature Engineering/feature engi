@@ -1,0 +1,12 @@
+Feature Engineering is study of our independent variables.
+
+mainly consist of following :
+
+1. Feature Selection 
+  1. Univariate Selection
+  2. Feature Importance 
+  3. using Correlation heatmap
+2. Feature Extraction 
+  1.Dimensionality Reduction 
+    1.PCA
+    2.LCA

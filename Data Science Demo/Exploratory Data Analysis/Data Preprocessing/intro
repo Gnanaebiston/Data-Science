@@ -1,0 +1,9 @@
+Data Preprocessing consist of:
+
+1. Gathering the data
+2. Import the dataset & Libraries
+3. Dealing with Missing Values
+4. Divide the dataset into Dependent & Independent variable
+5. dealing with Categorical values
+6. Split the dataset into training and test set
+7. Feature Scaling.
